@@ -1,6 +1,7 @@
-home:
-  path: /
-  controller: App\Controller\HomeController::index
+#Nous avons recrée cette route avec des annotations
+#home:
+  #path: /
+  #controller: App\Controller\HomeController::index
   #index c'est une méthode qu'on appelle sur la classe HomeController
   #ici en haut, c'est une rout et on fixe le chemin
 
