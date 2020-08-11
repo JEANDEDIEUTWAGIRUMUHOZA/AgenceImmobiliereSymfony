@@ -2,29 +2,22 @@
 
 namespace App\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
-use Twig\Environment;
-use Twig\Error\LoaderError;
-use Twig\Error\RuntimeError;
-use Twig\Error\SyntaxError;
+use Symfony\Component\Routing\Annotation\Route;
 
-class HomeController{
 
-    /**
-     * @var Environment
-     */
-    private $twig;
+class HomeController extends AbstractController {
 
-   public function __construct(Environment $twig){ //ici Environment permet de charger les classes dont on a besoin
-        $this->twig = $twig;
-    }
+/**
+ * le chemin(path)home on l'appele dans le fichier base avec le bouton immos
+* @Route("", name="home")
+*/
     public function index():Response{
-        //return new Response('Salut les gens');// il faut absolument renvoyer le response, différent en Laravel
-        try {
-            return new Response($this->twig->render('pages/home.html.twig'));
-        } catch (LoaderError $e) {
-        } catch (RuntimeError $e) {
-        } catch (SyntaxError $e) {
-        }//retourne la page qui est dans template
+
+            //retourne la page qui est dans template
+            return $this->render('pages/home.html.twig');
+
+
 }
 }
