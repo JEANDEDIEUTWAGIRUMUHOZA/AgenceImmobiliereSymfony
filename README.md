@@ -32,4 +32,8 @@ CRÉATION DES TABLES
 LANCER LES MIGRATIONS APRES CRÉATION DE TABLE
 
    php bin/console make:migration
+     
+APPLIQUER LES MIGRATIONS
+
+  php bin/console doctrine:migrations:migrate
     
