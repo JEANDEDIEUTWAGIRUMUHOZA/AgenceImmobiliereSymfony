@@ -12,6 +12,7 @@ class HomeController extends AbstractController {
 /**
  * le chemin(path)home on l'appele dans le fichier base avec le bouton immos
 * @Route("", name="home")
+ * @return Response
 */
     public function index():Response{
 
