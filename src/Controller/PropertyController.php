@@ -3,6 +3,8 @@
 namespace App\Controller;
 
 use App\Repository\PropertyRepository;
+use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -17,9 +19,18 @@ class PropertyController extends AbstractController {
 
 
 
-    public function __construct(PropertyRepository $repository)
+    private $em;
+
+
+    /**
+     * PropertyController constructor.
+     * @param PropertyRepository $repository
+     * @param EntityManagerInterface $em
+     */
+    public function __construct(PropertyRepository $repository, EntityManagerInterface $em)
     {
         $this->repository  = $repository;
+        $this->em = $em;
     }
 
     /**
@@ -31,7 +42,7 @@ class PropertyController extends AbstractController {
 
 
 
-        /*INTERACGIR AVEC ENTITY DE BASE DE DONNEES
+        /*INTERAGIR AVEC ENTITY DE BASE DE DONNEES
          * $property = new Property();
         $property->setTitle('Le premier bien')
             ->setPrice(500000)
@@ -61,8 +72,10 @@ class PropertyController extends AbstractController {
         dump($repository);*/
 
         //ici on cherche les biens en fonction des critères, ce findAll on l'a défini dans le repository
-        $property = $this->repository->findAllVisible();
-        dump($property);
+        /*$property = $this->repository->findAllVisible();
+        $this->em->flush();
+        dump($property);*/
+
         return $this->render( 'property/index.html.twig',[
             'current_menu' => 'properties'
         ]);

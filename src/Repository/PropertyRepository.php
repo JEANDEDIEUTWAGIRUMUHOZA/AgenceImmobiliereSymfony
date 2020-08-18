@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Property;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\DBAL\Query\QueryBuilder;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -19,11 +20,17 @@ class PropertyRepository extends ServiceEntityRepository
         parent::__construct($registry, Property::class);
     }
 
-    //on crée une méthode pour retourner tous les biens non vendus, ça c'est une requete
 
-    public function findAllVisible(){
-        return $this->createQueryBuilder('p')
-            ->where('p.sold = false')
+
+    //on crée une méthode pour retourner tous les biens non vendus, ça c'est une requete
+    /**
+     * @return Property[]
+     */
+
+
+    public function findAllVisible(): array{
+        return $this->findVisibleQuery()
+
             ->getQuery()
             ->getResult();
     }
@@ -55,4 +62,28 @@ class PropertyRepository extends ServiceEntityRepository
         ;
     }
     */
+    /**
+     * @return Property[]
+     */
+    public function findLatest(): array
+    {
+        return $this->findVisibleQuery('p')
+            ->where('p.sold = false')
+            ->setMaxResults(4)
+            ->getQuery()
+            ->getResult();
+
+    }
+
+    //méthode de requete pour trouver tous les enregistrements disponibles
+
+    /**
+     * @return QueryBuilder|\Doctrine\ORM\QueryBuilder
+     */
+    private function findVisibleQuery()
+    {
+
+        return $this->createQueryBuilder('p')
+            ->where('p.sold = false');
+    }
 }
