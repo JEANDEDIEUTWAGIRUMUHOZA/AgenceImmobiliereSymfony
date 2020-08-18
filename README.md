@@ -21,7 +21,7 @@ Modifier votre fichier .env pour ajouter la bonne adresse de votre base de donnÃ
 Lancer le serveur
   php -S 127.0.0.1:8000 -t public
 
-CREATION DES TABLES
+CRÃ‰ATION DES TABLES
 
     php bin/console make:entity
     
