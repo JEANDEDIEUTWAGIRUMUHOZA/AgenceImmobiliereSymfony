@@ -19,6 +19,14 @@ class PropertyRepository extends ServiceEntityRepository
         parent::__construct($registry, Property::class);
     }
 
+    //on crée une méthode pour retourner tous les biens non vendus, ça c'est une requete
+
+    public function findAllVisible(){
+        return $this->createQueryBuilder('p')
+            ->where('p.sold = false')
+            ->getQuery()
+            ->getResult();
+    }
     // /**
     //  * @return Property[] Returns an array of Property objects
     //  */
