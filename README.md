@@ -31,5 +31,5 @@ CRÉATION DES TABLES
     
 LANCER LES MIGRATIONS APRES CRÉATION DE TABLE
 
-php bin/console make:migration
+   php bin/console make:migration
     
