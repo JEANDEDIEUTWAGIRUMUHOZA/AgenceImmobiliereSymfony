@@ -16,6 +16,7 @@ composer create-project symfony/skeleton my_project_name
 Modifier votre fichier .env pour ajouter la bonne adresse de votre base de données, exemple de mon chemin base de données:
 
    DATABASE_URL=mysql://root:" "@127.0.0.1:3306/db_name?serverVersion=5.7
+   Créer la base de données: php bin/console doctrine:database:create
    
 Lancer le serveur
   php -S 127.0.0.1:8000 -t public
