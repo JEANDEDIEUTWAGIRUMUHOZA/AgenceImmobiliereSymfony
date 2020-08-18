@@ -36,4 +36,9 @@ LANCER LES MIGRATIONS APRES CRÉATION DE TABLE
 APPLIQUER LES MIGRATIONS
 
   php bin/console doctrine:migrations:migrate
+  
+POUR AJOUTER LES CHAMPS DANS NOTRE TABLE
+
+ - Soit créer les attributs, les getters et les setters
+ - Soit recréer la table et le framework nous demanderas si on veut rajouter les champs
     
