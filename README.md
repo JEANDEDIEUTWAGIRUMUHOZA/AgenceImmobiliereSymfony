@@ -29,3 +29,7 @@ CRÉATION DES TABLES
 
     php bin/console make:entity
     
+LANCER LES MIGRATIONS APRES CRÉATION DE TABLE
+
+php bin/console make:migration
+    
