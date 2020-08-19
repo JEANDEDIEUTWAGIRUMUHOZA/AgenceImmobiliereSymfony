@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Property;
 use App\Repository\PropertyRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ObjectManager;
@@ -81,4 +82,37 @@ class PropertyController extends AbstractController {
         ]);
 
     }
+
+    //Méthode pour faire fonction le lien qui affiche les détails d'un bien qui est dans dans home.html.twig
+
+    /**
+     * @Route("/biens/{slug}-{id}", name="property.show", requirements={"slug": "[a-z0-9\-]*"})
+     * @param Property $property
+     * @param $slug
+     * @return Response
+     */
+    /*public function show($slug,$id):Response
+    {
+        $property = $this->repository->find($id);
+      return $this->render('property/show.html.twig',[
+          'property'=>$property,
+          'current_menu' => 'properties'
+      ]);
+    }*/
+
+    public function show(Property $property, $slug):Response
+  {
+      if($property->getSlug() !== $slug){
+          return $this->redirectToRoute('property.show',[
+              'id' => $property->getId(),
+              'slug' => $property->getSlug()
+          ], 301);
+      }
+
+    return $this->render('property/show.html.twig',[
+        'property'=>$property,
+        'current_menu' => 'properties'
+    ]);
+  }
+
 }
