@@ -181,6 +181,13 @@ class Property
         return $this;
     }
 
+    //méthode pour retouner le prix formaté(bien présenté)
+
+    public function getFormattedPrice():string {
+
+       return number_format($this->price,0,'',' ');
+    }
+
     public function getHeat(): ?int
     {
         return $this->heat;
