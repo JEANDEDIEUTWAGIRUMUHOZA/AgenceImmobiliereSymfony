@@ -21,8 +21,10 @@
 
             <td><a href="{{ path('admin.property.edit',{id: property.id}) }}" class="btn btn-success">Editer</a></td>
             <td>
-                <form action="{{ path('admin.property.delete', {id: property.id}) }}" style="display: inline-block">
+                <form method="post" action="{{ path('admin.property.delete', {id: property.id}) }}" style="display: inline-block" onsubmit="return confirm('Etes-vous vraiment sur de supprimer?')">
+
                     <input type="hidden" name="_method" value="DELETE">
+                    <input  type="hidden" name="_token" value="{{ csrf_token('delete' ~ property.id) }}">
                     <button class="btn btn-danger">Supprimer</button>
                 </form>
             </td>
