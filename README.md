@@ -14,6 +14,7 @@ PREREQUIS POUR INSTALLER LE PROJET:
 
 - Avoir Composer installé
 - Avoir la version PHP 7.1*
+- Avoir un serveur Apache et MySQL
 - Avoir Git en local
 
 POUR INSTALLER LE PROJET
