@@ -93,3 +93,18 @@ POUR AJOUTER LES CHAMPS DANS NOTRE TABLE
   
     Pour debug de la configuration: php bin/console config:dump-reference ComposantADebuger(ex:security...)
     
+    
+    
+    
+    
+    
+    
+ LES FIXTURES(Jeux de fausses données):
+ 
+  - Pour créer les fixtures: php bin/console:makefixture
+  - Appluquer les fixtures(load): php bin/console doctrine:fixtures:load
+  
+  
+ 
+ 
+    
