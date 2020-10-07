@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f94b90d-93ba-40c0-a0b0-b95e97d5f2b6" name="Default Changelist" comment="" />
+    <list default="true" id="1f94b90d-93ba-40c0-a0b0-b95e97d5f2b6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/admin/AdminPropertyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/AdminPropertyController.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -162,6 +165,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -178,7 +182,10 @@
       <workItem from="1598258328145" duration="27902000" />
       <workItem from="1598448921861" duration="4626000" />
       <workItem from="1598869038920" duration="6563000" />
-      <workItem from="1599049072582" duration="2153000" />
+      <workItem from="1599049072582" duration="4822000" />
+      <workItem from="1599642127366" duration="609000" />
+      <workItem from="1602009451923" duration="1481000" />
+      <workItem from="1602073293481" duration="2058000" />
     </task>
     <servers />
   </component>
@@ -210,9 +217,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1598448710070" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1598888973519">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1602074959826">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1598888973519" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602074959826" />
   </component>
 </project>
