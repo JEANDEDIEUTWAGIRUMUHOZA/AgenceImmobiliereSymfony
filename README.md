@@ -42,20 +42,20 @@ composer create-project symfony/skeleton my_project_name
 Modifier votre fichier .env pour ajouter la bonne adresse de votre base de données, exemple de mon chemin base de données:
 
    DATABASE_URL=mysql://root:" "@127.0.0.1:3306/NomBasedeDonnees
+   
+   
   
  CRÉER LA BASE DE DONNÉES: 
    
       php bin/console doctrine:database:create
+      
+      
+      
    
 LANCER LE SERVEUR
 
   php -S 127.0.0.1:8000 -t public
-  
-  DEBOGAGE:
-  
-  Config: 
-  
-    Pour debug de la configuration: php bin/console config:dump-reference ComposantADebuger(ex:security...)
+
     
     
 
@@ -63,16 +63,33 @@ CRÉATION DES TABLES
 
     php bin/console make:entity
     
+    
+    
 LANCER LES MIGRATIONS APRES CRÉATION DE TABLE
 
    php bin/console make:migration
+   
+   
      
 APPLIQUER LES MIGRATIONS
 
   php bin/console doctrine:migrations:migrate
   
+  
+  
 POUR AJOUTER LES CHAMPS DANS NOTRE TABLE
 
  - Soit créer les attributs, les getters et les setters
  - Soit recréer la table et le framework nous demanderas si on veut rajouter les champs
+ 
+ 
+ 
+ 
+ 
+   
+  DEBOGAGE:
+  
+  Config: 
+  
+    Pour debug de la configuration: php bin/console config:dump-reference ComposantADebuger(ex:security...)
     
