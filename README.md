@@ -50,6 +50,14 @@ Modifier votre fichier .env pour ajouter la bonne adresse de votre base de donnÃ
 LANCER LE SERVEUR
 
   php -S 127.0.0.1:8000 -t public
+  
+  DEBOGAGE:
+  
+  Config: 
+  
+    Pour debug de la configuration: php bin/console config:dump-reference ComposantADebuger(ex:security...)
+    
+    
 
 CRÃ‰ATION DES TABLES
 
