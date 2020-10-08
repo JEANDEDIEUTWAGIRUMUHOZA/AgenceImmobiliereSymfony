@@ -86,8 +86,13 @@ POUR AJOUTER LES CHAMPS DANS NOTRE TABLE
  
  
  PAGINATION DES BIENS
+ 
  - On veut paginer nos biens
- - Pou se faire on va utiliser les fixtures
+ - Pou se faire on va utiliser les fixtures avec faker de fzaninotto
+        https://github.com/fzaninotto/Faker
+ - Et la librairie Pagination avec KnpPaginatorBundle:
+     https://github.com/KnpLabs/KnpPaginatorBundle
+
    
   DEBOGAGE:
   
