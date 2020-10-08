@@ -91,9 +91,13 @@ POUR AJOUTER LES CHAMPS DANS NOTRE TABLE
    
   DEBOGAGE:
   
-  Config: 
+  1. Config: 
   
     Pour debug de la configuration: php bin/console config:dump-reference ComposantADebuger(ex:security...)
+ 
+ 2. AUTOWIRING
+ 
+   php bin/console debug:autowiring
     
     
     
