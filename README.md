@@ -85,7 +85,9 @@ POUR AJOUTER LES CHAMPS DANS NOTRE TABLE
  
  
  
- 
+ PAGINATION DES BIENS
+ - On veut paginer nos biens
+ - Pou se faire on va utiliser les fixtures
    
   DEBOGAGE:
   
