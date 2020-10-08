@@ -34,6 +34,8 @@ class PropertyController extends AbstractController {
         $this->em = $em;
     }
 
+
+
     /**
      * ce path property.index on l'appelle base.html.twig sur le bouton Acheter
      * @Route("/biens", name="property.index")
@@ -76,9 +78,10 @@ class PropertyController extends AbstractController {
         /*$property = $this->repository->findAllVisible();
         $this->em->flush();
         dump($property);*/
-
+        $properties = $this->repository->findAllVisible();
         return $this->render( 'property/index.html.twig',[
-            'current_menu' => 'properties'
+            'current_menu' => 'properties',
+            'properties' => $properties
         ]);
 
     }
