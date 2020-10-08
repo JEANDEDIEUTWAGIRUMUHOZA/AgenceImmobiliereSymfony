@@ -104,7 +104,8 @@ POUR AJOUTER LES CHAMPS DANS NOTRE TABLE
  LES FIXTURES(Jeux de fausses données):
  
   - Pour créer les fixtures: php bin/console:makefixture
-  - Appluquer les fixtures(load): php bin/console doctrine:fixtures:load --append(on ajoutera le flag append pour ne pas supprimer les données existantes)
+  - Appliquer les fixtures(load): php bin/console doctrine:fixtures:load --append(on ajoutera le flag append pour ne pas supprimer les données existantes)
+     Cette procédure on l'appliquera après chaque création des Fixtures
   
   
  
