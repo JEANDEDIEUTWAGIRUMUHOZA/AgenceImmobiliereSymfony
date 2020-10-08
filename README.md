@@ -86,14 +86,23 @@ POUR AJOUTER LES CHAMPS DANS NOTRE TABLE
  
  
  PAGINATION DES BIENS
+ 
  - On veut paginer nos biens
- - Pou se faire on va utiliser les fixtures
+ - Pou se faire on va utiliser les fixtures avec faker de fzaninotto
+        https://github.com/fzaninotto/Faker
+ - Et la librairie Pagination avec KnpPaginatorBundle:
+     https://github.com/KnpLabs/KnpPaginatorBundle
+
    
   DEBOGAGE:
   
-  Config: 
+  1. Config: 
   
     Pour debug de la configuration: php bin/console config:dump-reference ComposantADebuger(ex:security...)
+ 
+ 2. AUTOWIRING
+ 
+   php bin/console debug:autowiring
     
     
     
@@ -104,7 +113,8 @@ POUR AJOUTER LES CHAMPS DANS NOTRE TABLE
  LES FIXTURES(Jeux de fausses données):
  
   - Pour créer les fixtures: php bin/console:makefixture
-  - Appluquer les fixtures(load): php bin/console doctrine:fixtures:load --append(on ajoutera le flag append pour ne pas supprimer les données existantes)
+  - Appliquer les fixtures(load): php bin/console doctrine:fixtures:load --append(on ajoutera le flag append pour ne pas supprimer les données existantes)
+     Cette procédure on l'appliquera après chaque création des Fixtures
   
   
  
