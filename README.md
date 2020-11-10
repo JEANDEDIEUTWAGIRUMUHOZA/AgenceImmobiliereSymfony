@@ -3,11 +3,11 @@ Ce projet sera développé en Symfony 4.  Il a pour but de mettre en place une a
 
 Fonctionnalités de l'application(Cahier des charges):
 
-- Avec cette Application, on pourra filtrer les biens immobiliers en fonction de leur surface,nombre de pièces,prix ou s'ils sont accessibles en mobilité réduite
-- Un client pourra remplir un formulaire de contact pour un bien
-- Un agent immobilier recevra le message d'un client concernant un bien
-- Un agent immobilier pourra gérer ses biens en ajoutant un bien, des photos, en les supprimant etc.
-- Les clients pourront localiser un bien à l'aide d'une carte, ici nous utiliseront l'open street map
+    - Avec cette Application, on pourra filtrer les biens immobiliers en fonction de leur surface,nombre de pièces,prix ou s'ils sont accessibles en mobilité réduite
+    - Un client pourra remplir un formulaire de contact pour un bien
+    - Un agent immobilier recevra le message d'un client concernant un bien
+    - Un agent immobilier pourra gérer ses biens en ajoutant un bien, des photos, en les supprimant etc.
+     - Les clients pourront localiser un bien à l'aide d'une carte, ici nous utiliseront l'open street map
 
 
 PREREQUIS POUR INSTALLER LE PROJET:
